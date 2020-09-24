@@ -7,7 +7,6 @@ import (
 var board [3][3]string
 
 func updateBoard(choice []int, player string) {
-	f.Println("choice", choice)
 	var x = choice[0]
 	var y = choice[1]
 	if player == "a" {

@@ -1,10 +1,11 @@
 package main
 
-// import (
-// 	f "fmt"
-// )
+var gameOver = false
 
 func main() {
-	game()
-	showBoard()
+	for !gameOver {
+		gameStatus()
+		showBoard()
+		game()
+	}
 }
