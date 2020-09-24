@@ -4,14 +4,21 @@ import (
 	f "fmt"
 )
 
-var board [][]string
+var board [3][3]string
 
-func updateBoard(choice [][]int) {
-	f.Println(choice)
+func updateBoard(choice []int, player string) {
+	f.Println("choice", choice)
+	var x = choice[0]
+	var y = choice[1]
+	if player == "a" {
+		board[y][x] = "x"
+	} else {
+		board[y][x] = "o"
+	}
 }
 
 func showBoard() {
-	updateBoard([][]int{
-		{1, 0, 0},{},{},
-	})
+	f.Println(board[2])
+	f.Println(board[1])
+	f.Println(board[0])
 }
