@@ -9,15 +9,15 @@ import (
 )
 
 var turn = 1
-var player string
 var x int
 var y int
 
 func gameStatus() {
+	checkRows(board)
 	if turn == 9 {
+		f.Println("It's a draw!")
 		gameOver = true
 	}
-	checkRows(board)
 }
 
 func choose() {
@@ -58,6 +58,8 @@ func game() {
 	choose()
 
 	for (board[y][x] == "x" || board[y][x] == "o") { 
+		f.Println("That place is already taken. Try again")
+		showBoard()
 		choose()
 	}
 

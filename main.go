@@ -1,11 +1,13 @@
 package main
 
 var gameOver = false
+var player string
 
 func main() {
 	for !gameOver {
-		gameStatus()
 		showBoard()
 		game()
+		gameStatus()
 	}
+	showBoard()
 }
