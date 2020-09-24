@@ -14,7 +14,7 @@ var y int
 
 func gameStatus() {
 	checkRows(board)
-	if turn == 10 {
+	if turn == 10 && !gameOver {
 		f.Println("It's a draw!")
 		gameOver = true
 	}
